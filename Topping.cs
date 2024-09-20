@@ -21,7 +21,7 @@ namespace Pizza
             private set
             {
                 if (value.ToLower() != "meat" && value.ToLower() != "cheese" && value.ToLower() != "veggies" && value.ToLower() != "sauce")
-                    throw new ArgumentException($"Няма такава добавка");
+                    throw new ArgumentException($"There is no such topping");
                 type = value;
             }
 
@@ -32,7 +32,7 @@ namespace Pizza
             set
             {
                 if (value > 1 || value < 50)
-                    throw new ArgumentException($"Теглото трябва да бъде между 1 и 50 г.");
+                    throw new ArgumentException($"It must be between 1 and 50 grams");
                 mass = value;
             }
         }

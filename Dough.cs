@@ -22,7 +22,7 @@ namespace Pizza
             private set
             {
                 if (flour == string.Empty || (value.ToLower() != ("white") && value.ToLower() != ("wholegrain")))
-                throw new ArgumentException("Няма такова тесто");
+                throw new ArgumentException("There is no such dough");
                 flour = value;
             }
         }
@@ -35,7 +35,7 @@ namespace Pizza
             private set
             {
                 if (bakingTechnique == string.Empty || (value.ToLower() != "chewy" && value.ToLower() != "crispy" && value.ToLower() != "homemade"))
-                throw new ArgumentException("Не съществува такава техника");
+                throw new ArgumentException("There is no such technique");
                 bakingTechnique = value;
             }
         }
@@ -48,7 +48,7 @@ namespace Pizza
             set
             {
                 if (value < 0 || value > 200)
-                throw new ArgumentException("Грамажът на брашното трябва да е между 1 и 200.");
+                throw new ArgumentException("It must be between 1 and 200 grams");
                 mass = value;
             }
         }
